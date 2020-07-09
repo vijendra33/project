@@ -1,0 +1,10 @@
+from tkinter import *
+root = Tk()
+menubar = Menu(root)
+filemenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label="VEG")
+filemenu.add_command(label="NON-VEG", command=root.quit)
+menubar.add_cascade(label="MENU", menu=filemenu)
+editmenu = Menu(menubar, tearoff=0)
+root.config(menu=menubar)
+root.mainloop()
